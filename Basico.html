@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+      var hola = "Hola Gero";
+      console.log(hola);
+      let hello = "Hello Gero";
+      console.log(hello);
+      //let a = new Number//
+      try {
+        let a = 12;
+        if (isNaN(a)) {
+          throw new Error("El Caracter introducudo no es un Numero");
+        }
+        console.log(`El Valor del Numero es:`, a);
+        console.log("----------------------------");
+        console.log("Calculado con la parte entera:");
+        console.log("");
+        function ParImparConEntero() {
+          let b = a / 2;
+          console.log(a, `Dividido en 2 es:`, b);
+          let c = parseInt(b);
+          console.log(`La parte entera es:`, c);
+          if (c === b) {
+            console.log(a, `Es un Nro. PAR`);
+          } else {
+            console.log(a, `Es un Nro. IMPAR`);
+          }
+        }
+        ParImparConEntero();
+        console.log("----------------------------");
+        console.log("Calculado con la operacion Modulo:");
+        console.log("");
+        function ParImparConResto() {
+          let d = a % 2;
+          console.log(`El Resultado de la operación con Modulo:`, d);
+          return d;
+        }
+        let e = ParImparConResto();
+        console.log(`El Valor retornado de la función es: `, e);
+        if (e === 0) {
+          console.log(a + ` Es un Nro. PAR`);
+        } else {
+          console.log(a + " Es un Nro. IMPAR");
+        }
+      } catch (error) {
+        console.log(`Se produjo un ERROR: $(error)`);
+      }
+    </script>
+  </body>
+</html>
